@@ -1,0 +1,47 @@
+# QuickPOS continuous integration (POS2-26)
+# Runs PHP syntax checks on every .php file and the automated tests.
+name: CI
+
+on:
+  push:
+    branches:
+      - "feature/**"
+      - "bugfix/**"
+      - main
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  lint-and-test:
+    name: PHP lint and tests
+    runs-on: ubuntu-latest   # free GitHub-hosted Linux runner
+
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.2"
+          coverage: none
+
+      - name: Show PHP version
+        run: php --version
+
+      # POS2-41: lint every PHP file in the repository, not one hard-coded file.
+      # xargs exits non-zero if any "php -l" call fails, which fails this step.
+      - name: PHP syntax check (php -l on all .php files)
+        run: |
+          set -euo pipefail
+          files=$(find . -name "*.php" -not -path "./vendor/*" -not -path "./.git/*" | sort)
+          echo "Checking $(echo "$files" | wc -l) PHP files"
+          echo "$files" | xargs -n1 php -l
+
+      # POS2-42: automated tests; any failed assertion exits with code 1 and fails the job.
+      - name: Run automated tests
+        run: php tests/run.php
