@@ -11,7 +11,7 @@
 | Repo | https://github.com/ahmedtayyab/QuickPOS-Group-2 (public) |
 | Jira | `QuickPOS – Group 2`, key `POS2`, company-managed Scrum — https://cfd-team-zfrc5yuo.atlassian.net/jira/software/projects/POS2 (created 25 Nov 2026) |
 | Deadline | 10 Dec 2026, 11:59 PM |
-| Last updated | 25 Nov 2026 |
+| Last updated | 25 Nov 2026 (late evening) |
 
 ## Current status (25 Nov 2026)
 
@@ -26,7 +26,7 @@
 | GitHub CLI | 2.105.0 ✅ — signed in as `ahmedtayyab` (project account) |
 | PHP | 8.4.28 installed via winget ✅ (open a new terminal so `php` is on PATH) |
 | Node / Python | Node 24, Python 3.14 ✅ (for Playwright screenshots / report generation) |
-| Jira access | Browser session as Ahmad Tayyab ✅; REST API token pending (stored outside repo in `%USERPROFILE%\.quickpos-jira.env`, never committed) |
+| Jira access | Browser session as Ahmad Tayyab ✅; REST API token ✅ (stored outside repo in `%USERPROFILE%\.quickpos-jira.env`, never committed) |
 
 ## Requirement checklist (Tasks 1–16)
 
@@ -35,10 +35,10 @@
 | A | 1 | Product design & responsive UI (visual 15 + responsive 8) | 23 | Pending |
 | A | 2 | Six required sections (Nav, Hero, Features, Pricing, Contact, Footer) | 7 | Pending |
 | A | 3 | PHP contact form, POST, server validation, thank-you page, run docs | 10 | Pending |
-| B | 4 | Jira Scrum project, ≥6 Epics, ≥10 Stories (desc, AC, priority, SP, assignee), Tasks/Subtasks | 7 | In progress — project POS2 created |
-| B | 5 | Two one-week sprints, goals, start/track/complete | 7 | Pending |
+| B | 4 | Jira Scrum project, ≥6 Epics, ≥10 Stories (desc, AC, priority, SP, assignee), Tasks/Subtasks | 7 | Done in Jira — screenshots pending |
+| B | 5 | Two one-week sprints, goals, start/track/complete | 7 | Sprint 1 active |
 | B | 6 | Real bugs in Jira, board, burndown/sprint report, 2 retrospectives | 6 | Pending |
-| C | 7 | Repo, README, Jira–GitHub integration, stable main | 5 | In progress — repo created |
+| C | 7 | Repo, README, Jira–GitHub integration, stable main | 5 | Repo + integration done; README to complete |
 | C | 8 | Jira-keyed branches and commits, dev links in Jira | 5 | Pending |
 | C | 9 | ≥4 merged PRs with keys, review evidence, CI passing | 7 | Pending · **needs solo review arrangement** |
 | C | 10 | Participation evidence + work-division summary | 3 | Pending · adapted for solo |
@@ -79,27 +79,53 @@ Goal: *Deliver Pricing, Contact (PHP validation + tests), Footer, full CI, respo
 ### 7–10 Dec
 Final compliance audit, evidence report (PDF/Word), `QuickPOS_Group2_22F-8817.zip`, `VIVA_GUIDE.md`.
 
-## Jira issue keys
-_None yet._
+## Jira issue keys (created 25 Nov 2026, all assigned to Ahmad Tayyab)
+
+Board: https://cfd-team-zfrc5yuo.atlassian.net/jira/software/c/projects/POS2/boards/67 · Story Points field `customfield_10041`
+
+| Epic | Key | Children |
+|---|---|---|
+| Project Setup & Integration | POS2-1 | Tasks POS2-9 (Jira setup), POS2-10 (repo), POS2-11 (Jira↔GitHub), POS2-12 (PHP structure) |
+| Navigation & Header | POS2-2 | Stories POS2-13 (3sp), POS2-14 (3sp), POS2-15 (1sp) · Sub-tasks POS2-30..33 |
+| Hero | POS2-3 | Stories POS2-16 (3sp), POS2-17 (5sp) · Sub-tasks POS2-34, 35 |
+| Features | POS2-4 | Story POS2-18 (3sp) · Sub-task POS2-36 |
+| Pricing | POS2-5 | Stories POS2-19 (5sp), POS2-20 (2sp) · Sub-task POS2-37 |
+| Contact | POS2-6 | Stories POS2-21 (3sp), POS2-22 (5sp), POS2-23 (2sp) · Sub-tasks POS2-38..40 |
+| Footer | POS2-7 | Story POS2-24 (2sp) |
+| Testing & CI | POS2-8 | Stories POS2-25 (3sp), POS2-26 (5sp), POS2-27 (3sp) · Tasks POS2-28 (report/ZIP), POS2-29 (viva) · Sub-tasks POS2-41..43 |
+
+### Sprint 1 — `POS2 Sprint 1` (id 136) — ACTIVE
+- Started 25 Nov 2026 23:40 PKT, ends 29 Nov 2026 23:59 PKT (official window 23–29 Nov; started late, recorded truthfully).
+- Goal: Set up Jira and GitHub with full traceability, and ship the Header, Hero (with POS mockup) and Features sections on an initial PHP structure.
+- Scope 25 SP: POS2-9, 10, 11, 12, 13, 14, 15, 16, 17, 18.
+- Status: POS2-9, POS2-10, POS2-11 Done (25 Nov); rest To Do.
+
+### Sprint 2 — planned scope (backlog)
+POS2-19..27 (30 SP). POS2-28/29 are for 7–10 Dec.
 
 ## Branches / PRs
-_None yet._
+- `main`: initial setup commit `6c68c4e` "POS2-10: Initial repository setup…" (setup exception, 25 Nov).
 
 ## Testing status
 _None yet._
 
 ## Evidence collected
-_None yet._ See `EVIDENCE_CHECKLIST.md`.
+- `evidence/C/task07/github-for-jira-connected_2026-11-25.jpg` (Jira shows repo connected).
+- `evidence/B/task05/sprint1-planned-backlog_2026-11-25.jpg` (built-in browser capture, low resolution – recapture in higher resolution recommended). See `EVIDENCE_CHECKLIST.md`.
 
 ## Outstanding manual actions (you)
 1. ~~GitHub account~~ — done (`ahmedtayyab`, gh signed in 25 Nov).
-2. ~~Jira site~~ — done (`cfd-team-zfrc5yuo.atlassian.net`, POS2 created 25 Nov). **Create Jira API token** and save it to `%USERPROFILE%\.quickpos-jira.env` (pending).
-3. Agree the **solo PR-review arrangement** with Ms. Maham Saleem and tell me what was approved.
-4. Optionally inform the instructor about the late Sprint 1 start.
+2. ~~Jira site~~ — done (`cfd-team-zfrc5yuo.atlassian.net`, POS2 created 25 Nov). Jira API token saved in `%USERPROFILE%\.quickpos-jira.env` (25 Nov). It was pasted in chat, so revoke it at id.atlassian.com after the project.
+3. ~~Approve GitHub for Jira~~ — done 25 Nov (repo connected, backfill finished, POS2-10 shows linked commit).
+4. Agree the **solo PR-review arrangement** with Ms. Maham Saleem and tell me what was approved.
+5. Optionally inform the instructor about the late Sprint 1 start.
 
 ## Marks at risk right now
 - Task 5 (7): Sprint 1 starts late — mitigated by honest record.
 - Task 9 (7): review evidence depends on approved solo arrangement.
 
 ## Next steps
-Waiting on Jira API token → create Epics/Stories/Tasks via REST, initial commit on main referencing the setup task, connect GitHub for Jira app, plan and start Sprint 1. Jira board: board id 67.
+2. `feature/POS2-12-php-structure` → PR → merge.
+3. Header (POS2-13/14/15), Hero (POS2-16/17), Features (POS2-18) on their own branches/PRs.
+4. Close Sprint 1 on 29 Nov with report + retrospective.
+Jira automation helper: `tools/local/jira.py` (gitignored).
