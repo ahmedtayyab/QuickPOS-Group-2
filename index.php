@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/includes/config.php';
 require __DIR__ . '/includes/head.php';
+require __DIR__ . '/sections/header.php';
 ?>
 <main id="main">
     <section class="section">
