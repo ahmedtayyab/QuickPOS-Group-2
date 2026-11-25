@@ -61,4 +61,24 @@
       if (section) observer.observe(section);
     });
   }
+
+  /* POS2-19: monthly / yearly billing toggle (prices are rendered by PHP in data attributes) */
+  var billing = document.querySelector('.billing-toggle');
+  if (billing) {
+    billing.hidden = false; // only shown when JavaScript can make it work
+    var buttons = billing.querySelectorAll('[data-billing]');
+    billing.addEventListener('click', function (event) {
+      var button = event.target.closest('[data-billing]');
+      if (!button) return;
+      var period = button.getAttribute('data-billing');
+      buttons.forEach(function (b) {
+        var active = b === button;
+        b.classList.toggle('is-active', active);
+        b.setAttribute('aria-pressed', String(active));
+      });
+      document.querySelectorAll('.plan__amount, .plan__billing').forEach(function (el) {
+        el.textContent = el.getAttribute('data-' + period);
+      });
+    });
+  }
 })();
