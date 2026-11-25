@@ -23,3 +23,11 @@ function e(?string $value): string
 {
     return htmlspecialchars((string) $value, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
 }
+
+/**
+ * Format an amount in Pakistani rupees, e.g. 1970 -> "Rs 1,970".
+ */
+function pkr(int $amount): string
+{
+    return 'Rs ' . number_format($amount);
+}

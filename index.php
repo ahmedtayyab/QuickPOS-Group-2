@@ -11,12 +11,6 @@ require __DIR__ . '/includes/head.php';
 require __DIR__ . '/sections/header.php';
 ?>
 <main id="main">
-    <section class="section">
-        <div class="container">
-            <p class="eyebrow">Coming soon</p>
-            <h1>QuickPOS</h1>
-            <p class="lead"><?= e(SITE_TAGLINE) ?></p>
-        </div>
-    </section>
+    <?php require __DIR__ . '/sections/hero.php'; ?>
 </main>
 <?php require __DIR__ . '/includes/foot.php'; ?>
