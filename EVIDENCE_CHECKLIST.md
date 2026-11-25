@@ -6,10 +6,10 @@ Never tick an item unless the file or URL actually exists. Files live in `eviden
 ## Part A – Website (40)
 | Task | Evidence | File / URL | Status |
 |---|---|---|---|
-| 1 | Full desktop page 1280px | `evidence/A/task01/desktop-1280-full.png` | ⬜ |
-| 1 | Tablet 768px | `evidence/A/task01/tablet-768-full.png` | ⬜ |
-| 1 | Mobile 375px (+ open menu) | `evidence/A/task01/mobile-375-*.png` | ⬜ |
-| 2 | Each of the six sections | `evidence/A/task02/section-*.png` | ⬜ |
+| 1 | Full desktop page 1280px | `evidence/A/task01/sprint1-main-2026-11-26-desktop-1280.png` (Sprint 1 state; final capture after Sprint 2) | ✅ partial |
+| 1 | Tablet 768px | `evidence/A/task01/sprint1-main-2026-11-26-tablet-768.png` (Sprint 1 state) | ✅ partial |
+| 1 | Mobile 375px (+ open menu) | `evidence/A/task01/sprint1-main-2026-11-26-mobile-375.png`, `evidence/A/task02/nav-mobile-open-375.png` | ✅ partial |
+| 2 | Each of the six sections | `evidence/A/task02/section-*.png` · nav QA log `nav-qa-results-2026-11-26.txt` | ⬜ (3/6 sections built) |
 | 3 | Validation errors shown | `evidence/A/task03/contact-invalid.png` | ⬜ |
 | 3 | Thank-you page after valid submit | `evidence/A/task03/contact-success.png` | ⬜ |
 
@@ -17,11 +17,11 @@ Never tick an item unless the file or URL actually exists. Files live in `eviden
 | Task | Evidence | File / URL | Status |
 |---|---|---|---|
 | 4 | Jira project overview / URL | `evidence/B/task04/project.png` | ⬜ |
-| 4 | Epics list | `evidence/B/task04/epics.png` | ⬜ |
-| 4 | Backlog | `evidence/B/task04/backlog.png` | ⬜ |
-| 4 | 2 detailed stories (AC + SP) | `evidence/B/task04/story-*.png` | ⬜ |
-| 5 | Sprint 1 planned backlog | `evidence/B/task05/sprint1-planned.png` | ⬜ |
-| 5 | Sprint 1 active board | `evidence/B/task05/sprint1-board.png` | ⬜ |
+| 4 | Epics list | `evidence/B/task04/epics_2026-11-26.jpg` | ✅ |
+| 4 | Backlog | `evidence/B/task04/backlog-sprint1-done_2026-11-26.jpg`, `backlog-product-backlog_2026-11-26.jpg` | ✅ |
+| 4 | 2 detailed stories (AC + SP) | `evidence/B/task04/story-POS2-22-detail_2026-11-26.jpg`, `story-POS2-17-detail_2026-11-26.jpg` | ✅ |
+| 5 | Sprint 1 planned backlog | `evidence/B/task05/sprint1-planned-backlog_2026-11-25.jpg` (low-res; recapture optional) | ✅ |
+| 5 | Sprint 1 active board | `evidence/B/task05/sprint1-active-board_2026-11-26.jpg` | ✅ |
 | 5 | Sprint 1 completed report | `evidence/B/task05/sprint1-report.png` | ⬜ |
 | 5 | Sprint 2 planned / board / report | `evidence/B/task05/sprint2-*.png` | ⬜ |
 | 6 | Burndown Sprint 1 & 2 | `evidence/B/task06/burndown-*.png` | ⬜ |
@@ -32,10 +32,11 @@ Never tick an item unless the file or URL actually exists. Files live in `eviden
 | Task | Evidence | File / URL | Status |
 |---|---|---|---|
 | 7 | Repo URL + README screenshot | | ⬜ |
-| 7 | Jira issue with Development panel | `evidence/C/task07/jira-dev-panel.png` | ⬜ |
-| 8 | Branch list | `evidence/C/task08/branches.png` | ⬜ |
-| 8 | Commit history with keys | `evidence/C/task08/commits.png` | ⬜ |
-| 9 | ≥4 merged PRs with review evidence | PR URLs | ⬜ |
+| 7 | Jira–GitHub connected | `evidence/C/task07/github-for-jira-connected_2026-11-25.jpg` | ✅ |
+| 7 | Jira issue with Development panel | `evidence/C/task07/jira-dev-panel-POS2-17_2026-11-26.jpg` | ✅ |
+| 8 | Branch list | `evidence/C/task08/branches-and-commits_2026-11-26.txt` (GitHub screenshot still useful) | ✅ partial |
+| 8 | Commit history with keys | `evidence/C/task08/branches-and-commits_2026-11-26.txt`, `jira-POS2-17-linked-commits_2026-11-26.jpg`, `jira-POS2-17-linked-PR_2026-11-26.jpg` | ✅ |
+| 9 | ≥4 merged PRs with review evidence | PRs #1–#4 merged with labelled AI-assisted reviews (no CI yet) · `evidence/C/task09/merged-prs_2026-11-26.txt` | ✅ partial |
 | 9 | Approved solo review arrangement | instructor confirmation | ⬜ |
 | 10 | Contributors / PR history + solo summary | `docs/SOLO_CONTRIBUTION.md` | ⬜ |
 
