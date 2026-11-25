@@ -302,5 +302,7 @@ p { margin: 0 0 var(--space-4); }
   .js .site-nav__cta { width: 100%; }
 
   html:not(.js) .site-header__inner { flex-wrap: wrap; padding-block: var(--space-2); }
-  html:not(.js) .site-nav { width: 100%; justify-content: space-between; gap: var(--space-2); }
+  html:not(.js) .site-nav { width: 100%; flex-wrap: wrap; gap: var(--space-2); }
+  html:not(.js) .site-nav__list { width: 100%; justify-content: space-between; }
+  html:not(.js) .site-nav__cta { width: 100%; }
 }
