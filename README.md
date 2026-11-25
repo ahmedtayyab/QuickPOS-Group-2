@@ -32,14 +32,14 @@ QuickPOS-Group-2/
 │   ├── config.php            # Constants, nav links, e() escaping, pkr() prices, start_session()
 │   ├── contact-handler.php   # Runs before any HTML: validate, re-show errors or redirect
 │   ├── icons.php             # Inline SVG icon set and icon() helper
-│   ├── head.php / foot.php   # <head> and closing scripts
+│   └── head.php / foot.php   # <head> and closing scripts
 ├── sections/                 # One PHP partial per landing-page section = one Jira Epic
-│   ├── header.php  hero.php  features.php  pricing.php  contact.php  footer.php
+│   └── header.php  hero.php  features.php  pricing.php  contact.php  footer.php
 ├── assets/
 │   ├── css/styles.css        # Design tokens, layout and components
 │   ├── js/main.js            # Mobile menu, billing toggle, error-summary focus
 │   └── img/logo-mark.svg
-├── tests/                    # run.php runner + *Test.php files (22 tests)
+├── tests/                    # run.php runner + *Test.php files (validator, form, helpers)
 ├── .github/workflows/ci.yml  # GitHub Actions: php -l on every file + tests
 ├── docs/RETROSPECTIVES.md    # Sprint 1 and Sprint 2 retrospectives
 ├── PROJECT_PROGRESS.md       # Requirement and sprint progress log
