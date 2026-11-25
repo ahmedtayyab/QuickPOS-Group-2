@@ -118,7 +118,7 @@ The **GitHub for Atlassian** app connects the repository to Jira. Because branch
 - A real bug was also found along the way: `mb_strlen()` didn't exist on the local PHP, because the mbstring extension wasn't loaded (Bug POS2-45). It was fixed by counting characters with `preg_match_all`.
 
 ## 16. Solo contribution and AI assistance
-- The instructor approved working alone. All Jira work, commits and PRs are under **Ahmad Tayyab / `ahmedtayyab`**.
+- Group 2 is an approved solo group. All Jira work, commits and PRs are under **Ahmad Tayyab / `ahmedtayyab`**.
 - **AI assistance (Claude Code)** was used for coding, reviews, QA automation and documentation. The course allows AI tools; the student remains responsible for understanding and explaining the work. Commits carry a `Co-Authored-By: Claude` line, and reviews are labelled AI-assisted.
 - Be ready to explain any file in your own words, especially `ContactValidator.php`, `contact-handler.php`, `ci.yml` and `tests/run.php`.
 
@@ -152,7 +152,7 @@ The **GitHub for Atlassian** app connects the repository to Jira. Because branch
 
 **How do you know a failing test fails CI?** `run.php` exits with code 1 when any test fails, and Actions marks a non-zero exit as failed. Run 45696094635 proves it.
 
-**How were PRs reviewed in a solo group?** With an AI-assisted review comment, clearly labelled as such. Real findings were fixed in follow-up commits, and CI had to pass before merge. *(Explain whatever arrangement Ms. Maham Saleem approved.)*
+**How were PRs reviewed in a solo group?** With an AI-assisted review comment, clearly labelled as such. Real findings were fixed in follow-up commits, and CI had to pass before merge.
 
 **What would you improve next?** Upgrade `actions/checkout` to a version that runs on Node.js 24 (CI currently shows a deprecation warning), turn on Jira's native Reports view, and get an independent human reviewer.
 
