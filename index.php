@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/includes/config.php';
 require_once __DIR__ . '/includes/icons.php';
+require __DIR__ . '/includes/contact-handler.php'; // must run before any HTML (redirects on success)
 require __DIR__ . '/includes/head.php';
 require __DIR__ . '/sections/header.php';
 ?>
@@ -15,6 +16,7 @@ require __DIR__ . '/sections/header.php';
     <?php require __DIR__ . '/sections/hero.php'; ?>
     <?php require __DIR__ . '/sections/features.php'; ?>
     <?php require __DIR__ . '/sections/pricing.php'; ?>
+    <?php require __DIR__ . '/sections/contact.php'; ?>
 </main>
 <?php require __DIR__ . '/sections/footer.php'; ?>
 <?php require __DIR__ . '/includes/foot.php'; ?>

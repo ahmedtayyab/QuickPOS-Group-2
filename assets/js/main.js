@@ -62,6 +62,12 @@
     });
   }
 
+  /* POS2-40: after a failed submission, move focus to the error summary so it is read out */
+  var formAlert = document.getElementById('form-alert');
+  if (formAlert) {
+    formAlert.focus({ preventScroll: true });
+  }
+
   /* POS2-19: monthly / yearly billing toggle (prices are rendered by PHP in data attributes) */
   var billing = document.querySelector('.billing-toggle');
   if (billing) {

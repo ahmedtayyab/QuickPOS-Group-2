@@ -33,3 +33,19 @@ function pkr(int $amount): string
 {
     return 'Rs ' . number_format($amount);
 }
+
+/**
+ * Start the PHP session with safer cookie settings (used for the thank-you message only).
+ */
+function start_session(): void
+{
+    if (session_status() === PHP_SESSION_ACTIVE) {
+        return;
+    }
+    session_set_cookie_params([
+        'httponly' => true,   // not readable by JavaScript
+        'samesite' => 'Lax',  // not sent on cross-site POSTs
+        'secure'   => !empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off',
+    ]);
+    session_start();
+}
