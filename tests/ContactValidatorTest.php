@@ -51,6 +51,10 @@ return [
         $result = ContactValidator::validate([]);
         assert_same(['name', 'email', 'message'], array_keys($result['errors']), 'errors for all three fields');
     },
+    'name length counts characters, not bytes (Urdu name of 100 letters is accepted)' => function (): void {
+        $result = ContactValidator::validate(valid_contact_input(['name' => str_repeat('ع', 100)]));
+        assert_same([], $result['errors']);
+    },
     'valid input is accepted' => function (): void {
         $result = ContactValidator::validate(valid_contact_input());
         assert_same([], $result['errors'], 'valid input should have no errors');
