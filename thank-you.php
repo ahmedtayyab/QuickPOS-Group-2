@@ -11,7 +11,7 @@ require_once __DIR__ . '/includes/config.php';
 require_once __DIR__ . '/includes/icons.php';
 require_once __DIR__ . '/src/ContactForm.php';
 
-session_start();
+start_session();
 $name = $_SESSION['contact_name'] ?? null;
 $plan = ContactForm::plan($_SESSION['contact_plan'] ?? null);
 unset($_SESSION['contact_name'], $_SESSION['contact_plan']); // show the personal message once

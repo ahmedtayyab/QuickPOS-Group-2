@@ -21,10 +21,11 @@ if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
     $contact = ContactForm::submit($_POST);
 
     if ($contact['ok']) {
-        session_start();
+        start_session();
         $_SESSION['contact_name'] = $contact['data']['name'];
         $_SESSION['contact_plan'] = $contact['plan'];
-        header('Location: thank-you.php', true, 303);
+        // Explicit fragment: otherwise the browser keeps the form's #contact on the redirect
+        header('Location: thank-you.php#main', true, 303);
         exit;
     }
 }
