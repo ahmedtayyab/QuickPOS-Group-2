@@ -35,6 +35,10 @@ return [
         $result = ContactValidator::validate(valid_contact_input(['email' => 'ayesha@']));
         assert_true(isset($result['errors']['email']), 'expected an error for "ayesha@"');
     },
+    'message of only non-breaking spaces is rejected' => function (): void {
+        $result = ContactValidator::validate(valid_contact_input(['message' => "\u{00A0}\u{00A0}\u{2003}"]));
+        assert_true(isset($result['errors']['message']), 'Unicode spaces should count as empty');
+    },
     'empty email is rejected' => function (): void {
         $result = ContactValidator::validate(valid_contact_input(['email' => '']));
         assert_true(isset($result['errors']['email']), 'expected an error for an empty email');

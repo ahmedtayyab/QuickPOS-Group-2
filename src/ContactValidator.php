@@ -62,9 +62,20 @@ final class ContactValidator
         return (int) preg_match_all('/./su', $value);
     }
 
-    /** Convert any input to a trimmed string (arrays and other types become empty). */
+    /**
+     * Convert any input to a trimmed string (arrays and other types become empty).
+     * Also strips Unicode spaces such as U+00A0, which PHP's trim() leaves behind.
+     */
     private static function clean(mixed $value): string
     {
-        return is_scalar($value) ? trim((string) $value) : '';
+        if (!is_scalar($value)) {
+            return '';
+        }
+
+        $text = (string) $value;
+        $trimmed = preg_replace('/^[\s\p{Z}\x{200B}\x{FEFF}]+|[\s\p{Z}\x{200B}\x{FEFF}]+$/u', '', $text);
+
+        // preg_replace returns null for invalid UTF-8; fall back to a plain trim.
+        return $trimmed ?? trim($text);
     }
 }
