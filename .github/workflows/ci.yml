@@ -27,7 +27,7 @@ jobs:
       - name: Set up PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: "8.2"
+          php-version: "8.1"   # lowest version supported by the README
           coverage: none
 
       - name: Show PHP version
@@ -38,9 +38,8 @@ jobs:
       - name: PHP syntax check (php -l on all .php files)
         run: |
           set -euo pipefail
-          files=$(find . -name "*.php" -not -path "./vendor/*" -not -path "./.git/*" | sort)
-          echo "Checking $(echo "$files" | wc -l) PHP files"
-          echo "$files" | xargs -n1 php -l
+          echo "Checking $(find . -name '*.php' -not -path './vendor/*' -not -path './.git/*' | wc -l) PHP files"
+          find . -name "*.php" -not -path "./vendor/*" -not -path "./.git/*" -print0 | sort -z | xargs -0 -n1 php -l
 
       # POS2-42: automated tests; any failed assertion exits with code 1 and fails the job.
       - name: Run automated tests

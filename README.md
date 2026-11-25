@@ -67,7 +67,7 @@ It exits with code **1** if any assertion fails, so a failing test also fails CI
 To check PHP syntax locally the same way CI does:
 
 ```bash
-find . -name "*.php" -not -path "./vendor/*" -not -path "./.git/*" | xargs -n1 php -l
+find . -name "*.php" -not -path "./vendor/*" -not -path "./.git/*" -print0 | xargs -0 -n1 php -l
 ```
 
 ## Continuous Integration (GitHub Actions)
@@ -78,7 +78,7 @@ Workflow file: [`.github/workflows/ci.yml`](.github/workflows/ci.yml)
 |---|---|
 | Triggers | every push to `feature/**`, `bugfix/**` and `main`, and every pull request targeting `main` |
 | Runner | `ubuntu-latest` (free GitHub-hosted Linux runner) |
-| Steps | 1. check out the code · 2. set up PHP 8.2 (`shivammathur/setup-php`) · 3. `php -l` on **every** `.php` file · 4. `php tests/run.php` |
+| Steps | 1. check out the code · 2. set up PHP 8.1, the minimum supported version (`shivammathur/setup-php`) · 3. `php -l` on **every** `.php` file · 4. `php tests/run.php` |
 | Failure | a syntax error or a failed assertion makes the job fail, and the error is shown in the step log |
 
 Runs are listed in the repository's **Actions** tab. Pull requests show the result as the **CI / PHP lint and tests** check.
