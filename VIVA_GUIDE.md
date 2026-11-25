@@ -9,7 +9,13 @@ Read it once end to end, then practise the demo twice.
 
 ## 1. Live demo sequence (about 8 minutes)
 
-Before the viva: open a terminal in the project folder and run `php -S localhost:8000`. Open these tabs in order:
+**Before the viva (5 minutes):**
+1. Open a **new** terminal in the project folder and check `php -v` shows PHP 8.1 or newer.
+   If `php` is not recognised on the machine: `winget install --id PHP.PHP.8.4 -e`, then open a new terminal.
+2. Run `php -S localhost:8000` and keep that terminal open.
+3. Sign in to Jira (Ahmad's account) and GitHub in the browser, and close any extra tabs.
+
+Open these tabs in order:
 
 | # | Open | Show and say |
 |---|---|---|
