@@ -4,6 +4,8 @@
  * needs no extra HTTP requests and stays sharp at any size.
  */
 
+require_once __DIR__ . '/config.php';
+
 const ICONS = [
     'inventory' => '<path d="M3.5 7.5 12 3l8.5 4.5v9L12 21l-8.5-4.5z"/><path d="M3.5 7.5 12 12l8.5-4.5M12 12v9"/><path d="m7.75 5.25 8.5 4.5"/>',
     'analytics' => '<path d="M4 20h16"/><rect x="5" y="11" width="3" height="6" rx="1"/><rect x="10.5" y="7" width="3" height="10" rx="1"/><rect x="16" y="4" width="3" height="13" rx="1"/>',

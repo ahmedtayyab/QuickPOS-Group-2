@@ -516,8 +516,6 @@ p { margin: 0 0 var(--space-4); }
   transition: background-color 0.25s var(--ease), color 0.25s var(--ease);
 }
 .feature-card:hover .feature-card__icon { background: var(--brand-600); color: #fff; }
-.feature-card:nth-child(2) .feature-card__icon { background: var(--accent-100); color: #a96500; }
-.feature-card:nth-child(2):hover .feature-card__icon { background: var(--accent-500); color: var(--ink-900); }
 
 .feature-card__title { margin-bottom: var(--space-3); font-size: var(--fs-lg); }
 .feature-card__text { flex: 1; margin-bottom: var(--space-5); color: var(--ink-500); font-size: var(--fs-sm); }
