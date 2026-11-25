@@ -476,3 +476,71 @@ p { margin: 0 0 var(--space-4); }
   .hero__visual { padding-block: var(--space-2); }
   .float-card { display: none; }
 }
+
+/* =========================================================
+   Features (POS2-18)
+   ========================================================= */
+.icon { width: 24px; height: 24px; flex-shrink: 0; }
+.icon--sm { width: 16px; height: 16px; }
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-5);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-6) var(--space-5);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease), border-color 0.25s var(--ease);
+}
+.feature-card:hover { transform: translateY(-4px); border-color: var(--brand-100); box-shadow: var(--shadow-md); }
+
+.feature-card__icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: var(--space-5);
+  border-radius: var(--radius-md);
+  background: var(--brand-50);
+  color: var(--brand-600);
+  transition: background-color 0.25s var(--ease), color 0.25s var(--ease);
+}
+.feature-card:hover .feature-card__icon { background: var(--brand-600); color: #fff; }
+.feature-card:nth-child(2) .feature-card__icon { background: var(--accent-100); color: #a96500; }
+.feature-card:nth-child(2):hover .feature-card__icon { background: var(--accent-500); color: var(--ink-900); }
+
+.feature-card__title { margin-bottom: var(--space-3); font-size: var(--fs-lg); }
+.feature-card__text { flex: 1; margin-bottom: var(--space-5); color: var(--ink-500); font-size: var(--fs-sm); }
+
+.feature-card__points {
+  display: grid;
+  gap: var(--space-2);
+  margin: 0;
+  padding: var(--space-4) 0 0;
+  border-top: 1px solid var(--line);
+  list-style: none;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--ink-700);
+}
+.feature-card__points li { display: flex; align-items: center; gap: var(--space-2); }
+.feature-card__points .icon { color: var(--brand-600); }
+
+@media (max-width: 1023.98px) {
+  .feature-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 575.98px) {
+  .section { padding-block: var(--space-8); }
+  .feature-grid { grid-template-columns: minmax(0, 1fr); }
+}
