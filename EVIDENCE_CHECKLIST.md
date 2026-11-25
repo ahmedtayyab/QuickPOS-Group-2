@@ -9,7 +9,7 @@ Never tick an item unless the file or URL actually exists. Files live in `eviden
 | 1 | Full desktop page 1280px | `evidence/A/task01/sprint1-main-2026-11-26-desktop-1280.png` (Sprint 1 state; final capture after Sprint 2) | ✅ partial |
 | 1 | Tablet 768px | `evidence/A/task01/sprint1-main-2026-11-26-tablet-768.png` (Sprint 1 state) | ✅ partial |
 | 1 | Mobile 375px (+ open menu) | `evidence/A/task01/sprint1-main-2026-11-26-mobile-375.png`, `evidence/A/task02/nav-mobile-open-375.png` | ✅ partial |
-| 2 | Each of the six sections | `evidence/A/task02/section-*.png` · nav QA log `nav-qa-results-2026-11-26.txt` | ⬜ (3/6 sections built) |
+| 2 | Each of the six sections | `evidence/A/task02/section-*.png` · `nav-qa-results-2026-11-26.txt` · `pricing-*.png`, `pricing-qa-results-2026-11-26.txt` | ⬜ (4/6 sections built) |
 | 3 | Validation errors shown | `evidence/A/task03/contact-invalid.png` | ⬜ |
 | 3 | Thank-you page after valid submit | `evidence/A/task03/contact-success.png` | ⬜ |
 

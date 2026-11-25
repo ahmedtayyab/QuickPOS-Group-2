@@ -6,6 +6,8 @@
 
 declare(strict_types=1);
 
+date_default_timezone_set('Asia/Karachi');
+
 const SITE_NAME = 'QuickPOS';
 const SITE_TAGLINE = 'Point of Sale software for growing shops';
 

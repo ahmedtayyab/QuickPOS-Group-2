@@ -16,4 +16,5 @@ require __DIR__ . '/sections/header.php';
     <?php require __DIR__ . '/sections/features.php'; ?>
     <?php require __DIR__ . '/sections/pricing.php'; ?>
 </main>
+<?php require __DIR__ . '/sections/footer.php'; ?>
 <?php require __DIR__ . '/includes/foot.php'; ?>
