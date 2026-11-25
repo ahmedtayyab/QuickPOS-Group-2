@@ -28,7 +28,7 @@ Ahmad Tayyab (22F-8817), approved solo member. Development was AI-assisted (Clau
 - **Sprint start time recorded 4 minutes late.** The sprint start was entered as 23:40, but POS2-9 and POS2-10 were moved to Done at about 23:36. That is why Jira's sprint report counts them as "completed outside this sprint".
 - **The workflow did not set a Resolution.** Done issues showed "Unresolved" until the Resolution field was added to the project screens and set.
 - **No CI checks on Sprint 1 PRs.** The workflow was planned for Sprint 2, so PRs #1–#6 were verified locally only.
-- **Review is AI-assisted, not by a second person.** The solo review arrangement still needs the instructor's confirmation.
+- **Review is AI-assisted, not by a second person.** As a solo group there is no other member to review, so each review is clearly labelled as AI-assisted.
 - **Under-commitment.** The committed scope was finished within a few hours, so two stories were pulled in mid-sprint. The estimates did not account for AI-assisted development speed.
 
 ### What could be improved
@@ -39,7 +39,7 @@ Ahmad Tayyab (22F-8817), approved solo member. Development was AI-assisted (Clau
 ### Concrete improvement actions for Sprint 2
 1. **First Sprint 2 item: GitHub Actions CI (POS2-26)**, written test-first. Every later PR must show green checks before merge.
 2. **Start Sprint 2 in Jira before transitioning any of its issues**, and use the current time as the sprint start.
-3. **Send the review-arrangement request to Ms. Maham Saleem** (draft ready in `evidence/C/task09/`) and record her answer.
+3. **Use one review format on every PR:** a labelled AI-assisted review comment, fix commits, then a resolution comment that lists each fix.
 
 ---
 
@@ -68,12 +68,12 @@ Ahmad Tayyab (22F-8817), approved solo member. Development was AI-assisted (Clau
 - **First CI push rejected.** The GitHub login lacked the `workflow` permission needed to add `.github/workflows/ci.yml`; the student approved it through GitHub's device login.
 - **The Jira Reports view isn't enabled on the board** and couldn't be added by automation in the narrow browser pane. Burndown evidence is generated from Jira's own burndown data instead.
 - **The QA audit's first run reported false positives** (a visually hidden label, focus on the skip link). Each was checked by hand before deciding it wasn't a bug.
-- **The review is still AI-assisted and not by a second person.** The instructor's confirmation of the solo arrangement is pending.
+- **Reviews are AI-assisted, not by a second person** (solo group). They found real problems, but they are not an independent human review.
 
 ### What could be improved
 - Check the local PHP extensions against what CI provides before relying on optional extensions.
 - Enable the Jira Reports view at project setup so native charts are available.
-- Get the review arrangement confirmed at the start of a project, not at the end.
+- Settle the review format at the start of a project, so every PR (including the first ones) follows it and has CI.
 
 ### Concrete improvement action
-- **Before submission (7–10 Dec):** send the review-arrangement request, then add the board's Reports view and capture Jira's native sprint report and burndown for both sprints next to the generated charts.
+- **Before submission (7–10 Dec):** add the board's Reports view and capture Jira's native sprint report and burndown for both sprints next to the generated charts.

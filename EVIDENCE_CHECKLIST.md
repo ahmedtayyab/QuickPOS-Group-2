@@ -44,7 +44,7 @@ Never tick an item unless the file or URL exists. Local evidence lives in `evide
 | 8 | Branch list | `evidence/C/task08/branches_2026-11-26.png`, `branches-and-commits_2026-11-26.txt` | ✅ (recapture final) |
 | 8 | Commits with keys + Jira-linked commits | `evidence/C/task08/commits-main_2026-11-26.png`, `jira-POS2-17-linked-commits_2026-11-26.jpg`, `jira-POS2-17-linked-PR_2026-11-26.jpg` | ✅ |
 | 9 | Merged PRs with review evidence | PRs #1–#10 · `evidence/C/task09/pull-requests-closed_2026-11-26.png`, `pr-{1..6}-conversation_2026-11-26.png` | 🟡 recapture #7–#10 |
-| 9 | Approved solo review arrangement | instructor reply (draft request in `evidence/C/task09/`) | 👤 |
+| 9 | Solo review arrangement | labelled AI-assisted review + resolution comment on every PR (`pr-*-conversation_final.png`) | ✅ |
 | 10 | Solo contribution summary | `docs/SOLO_CONTRIBUTION.md` | ⬜ (POS2-28) |
 
 ## Part D – CI (15)

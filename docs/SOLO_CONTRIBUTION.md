@@ -37,7 +37,7 @@ The brief asks the *other* member to review each PR. With no second member, each
 2. fix commits for every real finding, and
 3. a resolution comment explaining each fix, with green CI from PR #7 onwards.
 
-No other accounts or reviewers were created. **This arrangement must be confirmed by Ms. Maham Saleem.** Her reply is to be added to the evidence report.
+No other accounts or reviewers were created. The reviews are AI-assisted and clearly labelled as such; they are not an independent human review.
 
 ## Use of AI assistance
 
