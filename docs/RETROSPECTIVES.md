@@ -40,3 +40,38 @@ Ahmad Tayyab (22F-8817), approved solo member. Development was AI-assisted (Clau
 1. **First Sprint 2 item: GitHub Actions CI (POS2-26)**, written test-first. Every later PR must show green checks before merge.
 2. **Start Sprint 2 in Jira before transitioning any of its issues**, and use the current time as the sprint start.
 3. **Send the review-arrangement request to Ms. Maham Saleem** (draft ready in `evidence/C/task09/`) and record her answer.
+
+---
+
+## Sprint 2 — `POS2 Sprint 2`
+
+| | |
+|---|---|
+| Official window | 30 Nov – 6 Dec 2026 |
+| Actual dates (Jira) | Started 26 Nov 2026 01:27 PKT, planned end 6 Dec 2026 23:59 PKT. It was started early because Sprint 1 finished early; Jira keeps the real dates. |
+| Sprint goal | Deliver the PHP contact form with tested server-side validation and a thank-you page, link plan CTAs to it, and add GitHub Actions CI (php -l + automated tests) with responsive QA and bug fixes. |
+| Committed | 7 stories, 23 story points (POS2-20, 21, 22, 23, 25, 26, 27) |
+| Added during sprint | POS2-44 docs task (2 SP); bugs POS2-45 and POS2-46, found during the sprint |
+| Pull requests | #7 CI, #8 validation (TDD), #9 contact form + thank-you, #10 bug fix. All merged with passing CI |
+| CI failure → fix | Run [45696094635](https://github.com/ahmedtayyab/QuickPOS-Group-2/actions/runs/45696094635) failed (tests written before the code: 6 passed, 9 failed) → run [45696329450](https://github.com/ahmedtayyab/QuickPOS-Group-2/actions/runs/45696329450) passed after the validator was implemented |
+
+### What went well
+- **CI came first.** Every Sprint 2 PR shows a green "PHP lint and tests" check before merge, which closed the main gap from Sprint 1.
+- **Test-driven development gave a real CI failure and fix.** The tests were committed before the validation rules, CI failed for that reason, and the implementation turned it green. No artificial break was needed.
+- **Reviews and probing found real defects before merge:** CI on a newer PHP than the documented minimum (#7), Unicode-only whitespace accepted as a message (#8), a stale `#contact` fragment after redirect and default session-cookie flags (#9).
+- **Automated accessibility audit.** axe-core at three widths found a genuine contrast bug (POS2-46), which went through the full bug workflow: Jira Bug → `bugfix/` branch → PR → CI → merge → re-test with 0 findings.
+
+### Problems encountered
+- **`mb_strlen()` was undefined on the local PHP build (Bug POS2-45).** The winget PHP has no php.ini, so `mbstring` wasn't loaded. Fixed by counting characters with PCRE, which is always available.
+- **First CI push rejected.** The GitHub login lacked the `workflow` permission needed to add `.github/workflows/ci.yml`; the student approved it through GitHub's device login.
+- **The Jira Reports view isn't enabled on the board** and couldn't be added by automation in the narrow browser pane. Burndown evidence is generated from Jira's own burndown data instead.
+- **The QA audit's first run reported false positives** (a visually hidden label, focus on the skip link). Each was checked by hand before deciding it wasn't a bug.
+- **The review is still AI-assisted and not by a second person.** The instructor's confirmation of the solo arrangement is pending.
+
+### What could be improved
+- Check the local PHP extensions against what CI provides before relying on optional extensions.
+- Enable the Jira Reports view at project setup so native charts are available.
+- Get the review arrangement confirmed at the start of a project, not at the end.
+
+### Concrete improvement action
+- **Before submission (7–10 Dec):** send the review-arrangement request, then add the board's Reports view and capture Jira's native sprint report and burndown for both sprints next to the generated charts.
