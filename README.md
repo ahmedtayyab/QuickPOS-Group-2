@@ -42,6 +42,8 @@ QuickPOS-Group-2/
 ├── tests/                    # run.php runner + *Test.php files (validator, form, helpers)
 ├── .github/workflows/ci.yml  # GitHub Actions: php -l on every file + tests
 ├── docs/RETROSPECTIVES.md    # Sprint 1 and Sprint 2 retrospectives
+├── docs/SOLO_CONTRIBUTION.md # Solo work summary, review arrangement, AI use
+├── VIVA_GUIDE.md             # Viva explanations, questions and demo sequence
 ├── PROJECT_PROGRESS.md       # Requirement and sprint progress log
 └── EVIDENCE_CHECKLIST.md     # Evidence mapped to Tasks 1–16
 ```

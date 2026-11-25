@@ -48,11 +48,13 @@ Ahmad Tayyab (22F-8817), approved solo member. Development was AI-assisted (Clau
 | | |
 |---|---|
 | Official window | 30 Nov – 6 Dec 2026 |
-| Actual dates (Jira) | Started 26 Nov 2026 01:27 PKT, planned end 6 Dec 2026 23:59 PKT. It was started early because Sprint 1 finished early; Jira keeps the real dates. |
+| Actual dates (Jira) | Started 26 Nov 2026 01:27 PKT, planned end 6 Dec 2026 23:59 PKT, completed 26 Nov 2026 01:51 PKT. It was started early because Sprint 1 finished early; Jira keeps the real dates. |
 | Sprint goal | Deliver the PHP contact form with tested server-side validation and a thank-you page, link plan CTAs to it, and add GitHub Actions CI (php -l + automated tests) with responsive QA and bug fixes. |
 | Committed | 7 stories, 23 story points (POS2-20, 21, 22, 23, 25, 26, 27) |
 | Added during sprint | POS2-44 docs task (2 SP); bugs POS2-45 and POS2-46, found during the sprint |
-| Pull requests | #7 CI, #8 validation (TDD), #9 contact form + thank-you, #10 bug fix. All merged with passing CI |
+| Pull requests | #7 CI, #8 validation (TDD), #9 contact form + thank-you, #10 bug fix, #11 docs. All merged with passing CI |
+| Completed | All 10 issues, 25 SP (Jira sprint report); nothing carried over |
+| Burndown | `evidence/B/task06/sprint2-burndown.png` (built from Jira's burndown data) |
 | CI failure → fix | Run [45696094635](https://github.com/ahmedtayyab/QuickPOS-Group-2/actions/runs/45696094635) failed (tests written before the code: 6 passed, 9 failed) → run [45696329450](https://github.com/ahmedtayyab/QuickPOS-Group-2/actions/runs/45696329450) passed after the validator was implemented |
 
 ### What went well
