@@ -9,7 +9,7 @@ Never tick an item unless the file or URL actually exists. Files live in `eviden
 | 1 | Full desktop page 1280px | `evidence/A/task01/sprint1-main-2026-11-26-desktop-1280.png` (Sprint 1 state; final capture after Sprint 2) | ✅ partial |
 | 1 | Tablet 768px | `evidence/A/task01/sprint1-main-2026-11-26-tablet-768.png` (Sprint 1 state) | ✅ partial |
 | 1 | Mobile 375px (+ open menu) | `evidence/A/task01/sprint1-main-2026-11-26-mobile-375.png`, `evidence/A/task02/nav-mobile-open-375.png` | ✅ partial |
-| 2 | Each of the six sections | `evidence/A/task02/section-*.png` · `nav-qa-results-2026-11-26.txt` · `pricing-*.png`, `pricing-qa-results-2026-11-26.txt` | ⬜ (4/6 sections built) |
+| 2 | Each of the six sections | `evidence/A/task02/section-*.png` · `nav-qa-results-2026-11-26.txt` · `pricing-*.png`, `pricing-qa-results-2026-11-26.txt` | ⬜ (5/6 sections built; final per-section captures after Contact) |
 | 3 | Validation errors shown | `evidence/A/task03/contact-invalid.png` | ⬜ |
 | 3 | Thank-you page after valid submit | `evidence/A/task03/contact-success.png` | ⬜ |
 
@@ -31,13 +31,13 @@ Never tick an item unless the file or URL actually exists. Files live in `eviden
 ## Part C – GitHub (20)
 | Task | Evidence | File / URL | Status |
 |---|---|---|---|
-| 7 | Repo URL + README screenshot | | ⬜ |
+| 7 | Repo URL + README screenshot | https://github.com/ahmedtayyab/QuickPOS-Group-2 · `evidence/C/task07/repo-home-readme_2026-11-26.png` (README completed in Sprint 2) | ✅ partial |
 | 7 | Jira–GitHub connected | `evidence/C/task07/github-for-jira-connected_2026-11-25.jpg` | ✅ |
 | 7 | Jira issue with Development panel | `evidence/C/task07/jira-dev-panel-POS2-17_2026-11-26.jpg` | ✅ |
-| 8 | Branch list | `evidence/C/task08/branches-and-commits_2026-11-26.txt` (GitHub screenshot still useful) | ✅ partial |
-| 8 | Commit history with keys | `evidence/C/task08/branches-and-commits_2026-11-26.txt`, `jira-POS2-17-linked-commits_2026-11-26.jpg`, `jira-POS2-17-linked-PR_2026-11-26.jpg` | ✅ |
-| 9 | ≥4 merged PRs with review evidence | PRs #1–#4 merged with labelled AI-assisted reviews (no CI yet) · `evidence/C/task09/merged-prs_2026-11-26.txt` | ✅ partial |
-| 9 | Approved solo review arrangement | instructor confirmation | ⬜ |
+| 8 | Branch list | `evidence/C/task08/branches_2026-11-26.png`, `branches-and-commits_2026-11-26.txt` | ✅ |
+| 8 | Commit history with keys | `evidence/C/task08/commits-main_2026-11-26.png`, `branches-and-commits_2026-11-26.txt`, `jira-POS2-17-linked-commits_2026-11-26.jpg`, `jira-POS2-17-linked-PR_2026-11-26.jpg` | ✅ |
+| 9 | ≥4 merged PRs with review evidence | PRs #1–#6 merged with labelled AI-assisted reviews (no CI yet) · `evidence/C/task09/pull-requests-closed_2026-11-26.png`, `pr-{1..6}-conversation_2026-11-26.png`, `merged-prs_2026-11-26.txt` | ✅ partial |
+| 9 | Approved solo review arrangement | instructor confirmation (draft request: `evidence/C/task09/instructor-review-arrangement-request_DRAFT.md`) | ⬜ |
 | 10 | Contributors / PR history + solo summary | `docs/SOLO_CONTRIBUTION.md` | ⬜ |
 
 ## Part D – CI (15)
