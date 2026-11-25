@@ -1,0 +1,22 @@
+# Secrets / local config (never commit)
+.env
+*.env
+.quickpos-jira.env
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Dependencies and tooling
+node_modules/
+vendor/
+
+# Temporary / build output
+*.log
+tmp/
+*.zip
+
+# Local automation helpers (Jira scripts)
+tools/local/
