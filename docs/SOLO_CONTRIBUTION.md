@@ -14,9 +14,11 @@ This page replaces the "work-division summary" of Task 10.
 | Developer | PHP structure, design system, all six sections, contact form, validator, thank-you page | 43 commits on `main`, 12 merged PRs |
 | Tester / QA | 22 automated PHP tests, test-first validation, browser QA at 375/768/1280px, accessibility audit | `tests/`, QA results in the evidence report |
 | DevOps | GitHub Actions CI (lint + tests), Jira–GitHub integration | `.github/workflows/ci.yml`, Actions runs, Jira Development panels |
-| Reviewer | Reviewed every PR and fixed real findings before merge (see arrangement below) | PR review comments #1–#12 |
+| Reviewer | Reviewed every PR and fixed real findings before merge (see arrangement below) | A review comment on every PR |
 
-## Activity in numbers (26 Nov 2026)
+## Activity in numbers
+
+Measured on 26 Nov 2026 at `main` commit `38b6427` (after PR #12), before this summary was merged. Later PRs add to these counts.
 
 | Measure | Count |
 |---|---|
