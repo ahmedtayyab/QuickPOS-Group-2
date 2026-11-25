@@ -1,152 +1,89 @@
 # QuickPOS – Group 2 · Project Progress
 
-> Persistent progress log. Update after every working session so work can resume in a new Claude session.
-> Source of truth: `CS4002_QuickPOS_Semester_Project_BCS9C_Fall2026.pdf` (6 pages, read in full on 25 Nov 2026).
+> Persistent progress log, so work can resume in a new session.
+> Source of truth: `CS4002_QuickPOS_Semester_Project_BCS9C_Fall2026.pdf` (6 pages).
 
 | Field | Value |
 |---|---|
-| Student | Ahmad Tayyab · 22F-8817 |
-| Group | 2 (approved solo member) |
+| Student | Ahmad Tayyab · 22F-8817 · Group 2 (approved solo member) |
 | Course | CS4002 Fundamentals of Software Project Management · Ms. Maham Saleem |
 | Repo | https://github.com/ahmedtayyab/QuickPOS-Group-2 (public) |
-| Jira | `QuickPOS – Group 2`, key `POS2`, company-managed Scrum — https://cfd-team-zfrc5yuo.atlassian.net/jira/software/projects/POS2 (created 25 Nov 2026) |
+| Jira | `QuickPOS – Group 2`, key `POS2`, company-managed Scrum, board 67 — https://cfd-team-zfrc5yuo.atlassian.net/jira/software/c/projects/POS2/boards/67 |
 | Deadline | 10 Dec 2026, 11:59 PM |
 | Last updated | 26 Nov 2026 |
 
-## Current status (26 Nov 2026)
+## Current status
+- **Website complete on `main`:** all six sections, PHP contact form with server-side validation and thank-you page, 22 automated tests, CI green.
+- **Sprint 1:** closed (25 Nov 23:40 → 26 Nov 01:22 PKT; official window 23–29 Nov). Retrospective written.
+- **Sprint 2:** active since 26 Nov 01:27 PKT (planned end 6 Dec 23:59; official window 30 Nov–6 Dec). All stories and bugs Done; POS2-44 (docs) in this PR. Close the sprint after this PR merges.
+- **Dates policy (agreed with Ahmad):** work is not held back by the calendar, but nothing is backdated. Jira keeps the real start and finish times, and each sprint goal states the official window.
 
-- **Current sprint:** Sprint 1, active 25 Nov 23:40 → 29 Nov 23:59 PKT. **All committed Sprint 1 issues are Done** (PRs #1–#4). On 26 Nov the committed scope was finished early, so **POS2-19 Pricing (5 SP)** and then **POS2-24 Footer (2 SP)** were pulled into Sprint 1 (scope changes recorded on each issue) and merged via PRs #5 and #6. Sprint 1 is now 32 SP, all Done. The sprint stays open until 29 Nov; close it then, not earlier.
-- **Schedule slip (truthful record):** The 22 Nov setup milestone and the first 2 days of Sprint 1 were missed. Nothing is backdated. Recommend telling the instructor about the late start.
-- **Website on `main`:** header + mobile nav, hero with POS mockup, features, pricing (monthly/yearly toggle), footer. Only the Contact section (PHP form) remains, in Sprint 2.
-
-## Environment (checked 25 Nov 2026)
-
-| Tool | Status |
-|---|---|
-| Git | 2.56.0 ✅ |
-| GitHub CLI | 2.105.0 ✅ — signed in as `ahmedtayyab` (project account) |
-| PHP | 8.4.28 installed via winget ✅ (open a new terminal so `php` is on PATH) |
-| Node / Python | Node 24, Python 3.14 ✅ (for Playwright screenshots / report generation) |
-| Jira access | Browser session as Ahmad Tayyab ✅; REST API token ✅ (stored outside repo in `%USERPROFILE%\.quickpos-jira.env`, never committed) |
-
-## Requirement checklist (Tasks 1–16)
+## Requirement status (Tasks 1–16)
 
 | Part | Task | Requirement | Marks | Status |
 |---|---|---|---|---|
-| A | 1 | Product design & responsive UI (visual 15 + responsive 8) | 23 | In progress — design system, header, hero, features done; no overflow at 375/768/1280 |
-| A | 2 | Six required sections (Nav, Hero, Features, Pricing, Contact, Footer) | 7 | 5 of 6 done (all except Contact) |
-| A | 3 | PHP contact form, POST, server validation, thank-you page, run docs | 10 | Pending |
-| B | 4 | Jira Scrum project, ≥6 Epics, ≥10 Stories (desc, AC, priority, SP, assignee), Tasks/Subtasks | 7 | Done in Jira — screenshots pending |
-| B | 5 | Two one-week sprints, goals, start/track/complete | 7 | Sprint 1 active |
-| B | 6 | Real bugs in Jira, board, burndown/sprint report, 2 retrospectives | 6 | Pending |
-| C | 7 | Repo, README, Jira–GitHub integration, stable main | 5 | Repo + integration done; README to complete |
-| C | 8 | Jira-keyed branches and commits, dev links in Jira | 5 | In progress — 4 keyed branches, keyed commits, dev links verified |
-| C | 9 | ≥4 merged PRs with keys, review evidence, CI passing | 7 | 4 merged PRs with keys + labelled AI-assisted reviews; **no CI on them yet; needs approved solo review arrangement** |
-| C | 10 | Participation evidence + work-division summary | 3 | Pending · adapted for solo |
-| D | 11 | `.github/workflows/ci.yml`, triggers, ubuntu runner, setup-php | 4 | Pending |
-| D | 12 | `php -l` on all PHP files, fails CI on error | 3 | Pending |
-| D | 13 | ≥4 tests in `tests/` (empty name, bad email, empty message, valid) | 5 | Pending |
-| D | 14 | Real failed CI run → fix → passing run | 3 | Pending |
-| E | 15 | ZIP + PDF/Word evidence report labelled Parts A–E, Tasks 1–16 | 2 | Pending |
-| E | 16 | Live viva + `VIVA_GUIDE.md` | 3 | Pending |
+| A | 1 | Design + responsive UI | 23 | ✅ Implemented; QA audit 0 findings at 375/768/1280 |
+| A | 2 | Six sections, working nav/CTAs | 7 | ✅ |
+| A | 3 | PHP contact form, POST, server validation, thank-you, run docs | 10 | ✅ |
+| B | 4 | Scrum project, 8 Epics, 15 Stories (AC, priority, SP, assignee), Tasks, Sub-tasks | 7 | ✅ |
+| B | 5 | Two sprints with goals, started/tracked/completed | 7 | Sprint 1 ✅ · Sprint 2 closes after POS2-44 |
+| B | 6 | Real bugs, board, burndown/report, retrospectives | 6 | Bugs POS2-45/46 ✅ · Sprint 1 burndown ✅ · Sprint 2 after close · both retros ✅ |
+| C | 7 | Repo, README, Jira integration, stable main | 5 | ✅ |
+| C | 8 | Keyed branches/commits, dev links | 5 | ✅ |
+| C | 9 | ≥4 merged PRs, keys, review evidence, CI | 7 | 10 PRs merged; #7–#10 with CI. **Review arrangement needs instructor confirmation** |
+| C | 10 | Participation / solo summary | 3 | ⬜ `docs/SOLO_CONTRIBUTION.md` (POS2-28) |
+| D | 11 | ci.yml, triggers, ubuntu, setup-php | 4 | ✅ |
+| D | 12 | php -l on all PHP files, fails on error | 3 | ✅ |
+| D | 13 | ≥4 tests in tests/, run in CI, fail on assertion | 5 | ✅ 22 tests |
+| D | 14 | Real failed run → fix → pass | 3 | ✅ run 45696094635 ❌ → 45696329450 ✅ |
+| E | 15 | ZIP + PDF/Word evidence report | 2 | ⬜ POS2-28 |
+| E | 16 | Viva + VIVA_GUIDE.md | 3 | ⬜ POS2-29 |
 
-## Requirements affected by solo status (need instructor confirmation)
-
-The PDF says groups of 1 need "suitable contribution and PR-review arrangements" agreed with the instructor.
-
-1. **Task 9.2** – "at least two PRs authored by each student" → solo: all ≥4 PRs authored by Ahmad.
-2. **Task 9.4** – "the other group member must review each PR" → **no second member exists.** Options to put to the instructor: (a) instructor/TA reviews PRs, (b) documented self-review + AI-assisted review comments clearly labelled as such, (c) a classmate as reviewer. **Not treated as complete until you confirm what was approved.**
-3. **Task 7.1 / 8.4 / 10** – "both members" access/contributions → solo contribution summary instead.
-4. **Task 4.1** – "add the approved group members" → only Ahmad; instructor/TA access still needed.
-5. **Task 16** – "both students attend" → Ahmad alone.
-
-## Execution plan
-
-### Sprint 1 (real dates: 25/26 → 29 Nov)
-Goal: *Set up Jira + GitHub with traceability, and ship the Header, Hero and Features sections on an initial PHP structure.*
-1. Jira project, Epics, Stories, Tasks; Sprint 1 planned and started.
-2. Repo + README + .gitignore, initial structure on `main` (setup exception).
-3. Jira ↔ GitHub integration (GitHub for Jira app — you must approve in browser).
-4. Branch/PR per story: project setup/PHP structure, header & nav, hero + POS mockup, features.
-5. Complete Sprint 1 on 29 Nov, sprint report + retrospective.
-
-### Sprint 2 (30 Nov → 6 Dec)
-Goal: *Deliver Pricing, Contact (PHP validation + tests), Footer, full CI, responsive QA and bug fixes.*
-- TDD for contact validator → genuine failing CI run → fix → passing run (Task 14).
-- QA at 375/768/1280, log real bugs, fix via `bugfix/` branches.
-- Complete Sprint 2 on 6 Dec, report + retrospective.
-
-### 7–10 Dec
-Final compliance audit, evidence report (PDF/Word), `QuickPOS_Group2_22F-8817.zip`, `VIVA_GUIDE.md`.
-
-## Jira issue keys (created 25 Nov 2026, all assigned to Ahmad Tayyab)
-
-Board: https://cfd-team-zfrc5yuo.atlassian.net/jira/software/c/projects/POS2/boards/67 · Story Points field `customfield_10041`
-
-| Epic | Key | Children |
+## Jira map
+| Epic | Key | Children (all Done unless noted) |
 |---|---|---|
-| Project Setup & Integration | POS2-1 | Tasks POS2-9 (Jira setup), POS2-10 (repo), POS2-11 (Jira↔GitHub), POS2-12 (PHP structure) |
-| Navigation & Header | POS2-2 | Stories POS2-13 (3sp), POS2-14 (3sp), POS2-15 (1sp) · Sub-tasks POS2-30..33 |
-| Hero | POS2-3 | Stories POS2-16 (3sp), POS2-17 (5sp) · Sub-tasks POS2-34, 35 |
-| Features | POS2-4 | Story POS2-18 (3sp) · Sub-task POS2-36 |
-| Pricing | POS2-5 | Stories POS2-19 (5sp), POS2-20 (2sp) · Sub-task POS2-37 |
-| Contact | POS2-6 | Stories POS2-21 (3sp), POS2-22 (5sp), POS2-23 (2sp) · Sub-tasks POS2-38..40 |
-| Footer | POS2-7 | Story POS2-24 (2sp) |
-| Testing & CI | POS2-8 | Stories POS2-25 (3sp), POS2-26 (5sp), POS2-27 (3sp) · Tasks POS2-28 (report/ZIP), POS2-29 (viva) · Sub-tasks POS2-41..43 |
+| Project Setup & Integration | POS2-1 | POS2-9, 10, 11, 12 |
+| Navigation & Header | POS2-2 | POS2-13, 14, 15 · sub-tasks 30–33 |
+| Hero | POS2-3 | POS2-16, 17 · sub-tasks 34, 35 · Bug POS2-46 |
+| Features | POS2-4 | POS2-18 · sub-task 36 |
+| Pricing | POS2-5 | POS2-19, 20 · sub-task 37 |
+| Contact | POS2-6 | POS2-21, 22, 23 · sub-tasks 38–40 · Bug POS2-45 |
+| Footer | POS2-7 | POS2-24 |
+| Testing & CI | POS2-8 (open) | POS2-25, 26, 27 · sub-tasks 41–43 · POS2-44 (docs, in progress) · POS2-28 report/ZIP, POS2-29 viva (backlog) |
 
-### Sprint 1 — `POS2 Sprint 1` (id 136) — ACTIVE
-- Started 25 Nov 2026 23:40 PKT, ends 29 Nov 2026 23:59 PKT (official window 23–29 Nov; started late, recorded truthfully).
-- Goal: Set up Jira and GitHub with full traceability, and ship the Header, Hero (with POS mockup) and Features sections on an initial PHP structure.
-- Committed scope 25 SP: POS2-9, 10, 11, 12, 13, 14, 15, 16, 17, 18. Added 26 Nov: POS2-19 (+5 SP), POS2-24 (+2 SP) → 32 SP.
-- Status: **all Done** — POS2-9/10/11 (25 Nov); POS2-12, 13, 14, 15, 16, 17, 18 and sub-tasks POS2-30..36 (26 Nov, after merge).
+Sprint ids: Sprint 1 = 136 (closed), Sprint 2 = 137 (active). Story Points field `customfield_10041`.
 
-### Sprint 2 — planned scope (backlog)
-POS2-20, 21, 22, 23, 25, 26, 27 (23 SP): plan CTA prefill, contact form, validation, thank-you page, tests, CI, responsive QA. POS2-28/29 are for 7–10 Dec. Epic POS2-5 Pricing is In Progress until POS2-20 is done.
-
-## Branches / PRs
-- `main`: initial setup commit `6c68c4e` "POS2-10: Initial repository setup…" (setup exception, 25 Nov).
-- Branches are kept after merge (evidence for Task 8).
-
-| PR | Branch | Jira | Review findings fixed | Merged |
+## Pull requests (all by `ahmedtayyab`, branches kept)
+| PR | Branch | Jira | Review findings fixed | CI |
 |---|---|---|---|---|
-| [#1](https://github.com/ahmedtayyab/QuickPOS-Group-2/pull/1) | `feature/POS2-12-php-structure` | POS2-12 | require_once config; removed `overflow-x:hidden` that masked overflow | 25 Nov, `b965758` |
-| [#2](https://github.com/ahmedtayyab/QuickPOS-Group-2/pull/2) | `feature/POS2-13-header-navigation` | POS2-13/14/15 | no-JS nav overflow at 375px (393→375); menu layout flash | 26 Nov, `bc31c30` |
-| [#3](https://github.com/ahmedtayyab/QuickPOS-Group-2/pull/3) | `feature/POS2-16-hero-section` | POS2-16/17 | floating cards covering Charge button/window bar; wrapped KPI and truncated names | 26 Nov, `305b6ff` |
-| [#4](https://github.com/ahmedtayyab/QuickPOS-Group-2/pull/4) | `feature/POS2-18-feature-cards` | POS2-18/36 | icons.php missing config dependency; inconsistent card colour | 26 Nov, `d07e5b6` |
-| [#5](https://github.com/ahmedtayyab/QuickPOS-Group-2/pull/5) | `feature/POS2-19-pricing-plans` | POS2-19/37 | price changes not announced (aria-live); uneven card heights | 26 Nov, `ea99d35` |
-| [#6](https://github.com/ahmedtayyab/QuickPOS-Group-2/pull/6) | `feature/POS2-24-footer` | POS2-24 | copyright year used UTC (now Asia/Karachi); 32px touch targets on mobile (now 44px) | 26 Nov, `74fea9e` |
+| #1 | feature/POS2-12-php-structure | POS2-12 | require_once; overflow masking | – |
+| #2 | feature/POS2-13-header-navigation | POS2-13/14/15 | no-JS overflow 393→375; layout flash | – |
+| #3 | feature/POS2-16-hero-section | POS2-16/17 | floating cards over mockup; wrapping | – |
+| #4 | feature/POS2-18-feature-cards | POS2-18/36 | icons.php dependency; card colour | – |
+| #5 | feature/POS2-19-pricing-plans | POS2-19/37 | aria-live; equal heights | – |
+| #6 | feature/POS2-24-footer | POS2-24 | timezone for year; 44px targets | – |
+| #7 | feature/POS2-26-ci-workflow | POS2-26/41/42/44 | PHP 8.1 minimum; null-separated lint | ✅ |
+| #8 | feature/POS2-22-contact-validation | POS2-22/25/38/39, Bug 45 | Unicode whitespace | ❌ then ✅ (TDD) |
+| #9 | feature/POS2-21-contact-form | POS2-21/22/23/20/40 | stale #contact fragment; cookie flags | ✅ |
+| #10 | bugfix/POS2-46-mockup-contrast | Bug POS2-46 | – (verified other uses) | ✅ |
 
-Review method on every PR: a GitHub review comment titled "AI-assisted code review (Claude Code) — not an independent human review", then a follow-up comment listing how each finding was fixed. No fake reviewers. PRs #1–#6 have no CI checks because the CI workflow is Sprint 2 scope (POS2-26).
+Review method: GitHub review comment titled "AI-assisted code review (Claude Code) — not an independent human review", then fix commits and a resolution comment. No fake reviewers.
 
-## Testing status
-- `php -l` clean on all PHP files (local, PHP 8.4.28).
-- Browser QA with Playwright + system Edge (`tools/local/shot.js`, `qa_nav.js`): no horizontal overflow at 375/768/1280; navigation QA 15/15 PASS; pricing QA 13/13 PASS (`qa_pricing.js`); no console errors.
-- Automated PHP tests + CI: Sprint 2 (POS2-25, POS2-26).
+## Outstanding manual actions (Ahmad)
+1. **Send the review-arrangement request** to Ms. Maham Saleem (`evidence/C/task09/instructor-review-arrangement-request_DRAFT.md`) and save her reply there.
+2. **Enable the Jira Reports view:** board → "+" next to the tabs → Reports → *Add to navigation*. Then Claude can capture Jira's native sprint report and burndown for both sprints.
+3. Revoke the Jira API token after the project (it was pasted in chat).
+4. Prepare for the viva with `VIVA_GUIDE.md` (to be written, POS2-29).
 
-## Evidence collected
-- `evidence/A/task01/sprint1-main-2026-11-26-{mobile-375,tablet-768,desktop-1280}.png` (Sprint 1 state of main, full page).
-- `evidence/A/task02/nav-mobile-open-375.png`, `nav-qa-results-2026-11-26.txt` (15/15 PASS).
-- `evidence/A/task02/pricing-{yearly-1280,768,375}.png`, `pricing-qa-results-2026-11-26.txt` (13/13 PASS).
-- Jira: `evidence/B/task04/` (epics, backlog, 2 stories), `evidence/B/task05/sprint1-active-board_2026-11-26.jpg`, `evidence/C/task07/jira-dev-panel-POS2-17_2026-11-26.jpg`, `evidence/C/task08/` (linked PR/commits, branch + commit history), `evidence/C/task09/merged-prs_2026-11-26.txt`.
-- `evidence/C/task07/github-for-jira-connected_2026-11-25.jpg` (Jira shows repo connected).
-- `evidence/B/task05/sprint1-planned-backlog_2026-11-25.jpg` (built-in browser capture, low resolution – recapture in higher resolution recommended). See `EVIDENCE_CHECKLIST.md`.
-
-## Outstanding manual actions (you)
-1. ~~GitHub account~~ — done (`ahmedtayyab`, gh signed in 25 Nov).
-2. ~~Jira site~~ — done (`cfd-team-zfrc5yuo.atlassian.net`, POS2 created 25 Nov). Jira API token saved in `%USERPROFILE%\.quickpos-jira.env` (25 Nov). It was pasted in chat, so revoke it at id.atlassian.com after the project.
-3. ~~Approve GitHub for Jira~~ — done 25 Nov (repo connected, backfill finished, POS2-10 shows linked commit).
-4. Agree the **solo PR-review arrangement** with Ms. Maham Saleem and tell me what was approved. A ready-to-send draft is in `evidence/C/task09/instructor-review-arrangement-request_DRAFT.md`.
-5. Optionally inform the instructor about the late Sprint 1 start.
-7. On/after 29 Nov: let me complete Sprint 1 and capture the sprint report, burndown and active board.
-
-## Marks at risk right now
-- Task 5 (7): Sprint 1 starts late — mitigated by honest record.
-- Task 9 (7): review evidence depends on approved solo arrangement; Sprint 1 PRs have no CI checks (Sprint 2 PRs will).
-- Task 6 (6): no Jira Bug issues yet — only defects found after merge are logged as Bugs; defects found in PR review are recorded in PR comments.
+## Marks at risk
+- Task 9 (7): depends on the instructor accepting the AI-assisted self-review; PRs #1–#6 have no CI checks (CI arrived in Sprint 2).
+- Task 6 (6): burndown is generated from Jira data until the native Reports view is enabled.
+- Task 5 (7): Sprint 1 started late (25 Nov), and both sprints ran on 25–26 Nov instead of the official weeks. Recorded truthfully; the instructor may view the timing critically.
 
 ## Next steps
-2. 29 Nov: complete Sprint 1 in Jira, capture Sprint Report + Burndown, write Sprint 1 retrospective (`docs/RETROSPECTIVES.md`).
-3. 30 Nov: plan + start Sprint 2 (POS2-19..27). Start with CI (POS2-26) and TDD tests (POS2-25/38) → genuine failing run → implement ContactValidator → passing run.
-4. Then Pricing, Contact, Footer, responsive QA, bugs.
-Local tools: `tools/local/jira.py` (Jira REST), `shot.js` (screenshots/overflow), `qa_nav.js` (nav QA) — gitignored. Local server: `php -S localhost:8000`.
-Jira automation helper: `tools/local/jira.py` (gitignored).
+1. Merge POS2-44 docs PR → POS2-44 Done → capture Sprint 2 board → close Sprint 2 → Sprint 2 report + burndown.
+2. POS2-28: `docs/SOLO_CONTRIBUTION.md`, evidence report (PDF/Word), `QuickPOS_Group2_22F-8817.zip` (verify extract-and-run).
+3. POS2-29: `VIVA_GUIDE.md` with demo sequence.
+4. Final compliance audit against the PDF.
+
+Local tools (gitignored, `tools/local/`): `jira.py` (REST), `burndown.py`, `shot.js`, `qa_full.js` (axe audit), `qa_nav.js`, `qa_pricing.js`, `qa_contact.js`, `shot_github.js`. Dev server: `php -S localhost:8000`.
