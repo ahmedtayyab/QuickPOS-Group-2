@@ -322,9 +322,9 @@ p { margin: 0 0 var(--space-4); }
 
 .hero__inner {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.25fr);
   align-items: center;
-  gap: var(--space-8);
+  gap: var(--space-7);
 }
 
 .hero__badge {
@@ -356,7 +356,8 @@ p { margin: 0 0 var(--space-4); }
   background: var(--brand-100) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4.5 8.2l2.2 2.2 4.8-4.8' fill='none' stroke='%230e7c66' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 14px no-repeat;
 }
 
-.hero__visual { position: relative; padding: var(--space-5) 0; }
+/* Vertical padding leaves room for the floating cards so they never cover the window */
+.hero__visual { position: relative; padding: 56px 0; }
 
 /* Mockup window */
 .mockup {
@@ -388,7 +389,7 @@ p { margin: 0 0 var(--space-4); }
 .mockup__title { flex: 1; text-align: center; font-weight: 700; color: var(--ink-500); }
 .mockup__status { padding: 2px 8px; border-radius: var(--radius-pill); background: var(--brand-100); color: var(--brand-700); font-weight: 700; font-size: 11px; }
 
-.mockup__body { display: grid; grid-template-columns: 52px minmax(0, 1fr) 190px; min-height: 340px; }
+.mockup__body { display: grid; grid-template-columns: 52px minmax(0, 1fr) 172px; min-height: 340px; }
 
 .mockup__rail { display: flex; flex-direction: column; align-items: center; gap: 14px; padding: 14px 0; background: var(--ink-900); }
 .mockup__logo img { width: 24px; height: 24px; }
@@ -400,7 +401,7 @@ p { margin: 0 0 var(--space-4); }
 .mockup__stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-bottom: 12px; }
 .stat { display: flex; flex-direction: column; gap: 2px; padding: 10px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
 .stat__label { color: var(--ink-500); font-size: 11px; }
-.stat__value { color: var(--ink-900); font-size: 16px; font-weight: 800; letter-spacing: -0.01em; }
+.stat__value { color: var(--ink-900); font-size: 15px; white-space: nowrap; font-weight: 800; letter-spacing: -0.01em; }
 .stat__trend { color: var(--brand-600); font-size: 11px; font-weight: 700; }
 .mini-bars { display: flex; align-items: flex-end; gap: 4px; height: 38px; margin-top: 4px; }
 .mini-bars i { flex: 1; border-radius: 3px 3px 0 0; background: var(--brand-100); }
@@ -414,7 +415,7 @@ p { margin: 0 0 var(--space-4); }
 .product--accent .product__thumb { background: var(--accent-100); }
 .product--sky .product__thumb { background: #dcecfb; }
 .product--rose .product__thumb { background: #fbe1e6; }
-.product__name { overflow: hidden; color: var(--ink-900); font-weight: 700; white-space: nowrap; text-overflow: ellipsis; }
+.product__name { color: var(--ink-900); font-weight: 700; }
 .product__price { color: var(--ink-500); }
 
 .mockup__cart { display: flex; flex-direction: column; gap: 8px; padding: 14px; border-left: 1px solid var(--line); background: var(--surface); }
@@ -422,6 +423,7 @@ p { margin: 0 0 var(--space-4); }
 .cart__title em { color: var(--ink-300); font-style: normal; font-weight: 600; }
 .cart__row { display: flex; justify-content: space-between; gap: 8px; padding-bottom: 8px; border-bottom: 1px dashed var(--line); }
 .cart__row span:first-child { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.cart__row span:last-child { flex-shrink: 0; white-space: nowrap; }
 .cart__total { display: flex; justify-content: space-between; margin-top: auto; color: var(--ink-900); font-size: 14px; }
 .cart__pay { padding: 10px; border-radius: 9px; background: var(--brand-600); color: #fff; font-weight: 800; text-align: center; }
 
@@ -450,8 +452,8 @@ p { margin: 0 0 var(--space-4); }
   animation: float 6s ease-in-out infinite;
 }
 .float-card strong { display: block; color: var(--ink-900); font-size: var(--fs-sm); }
-.float-card--stock { top: 0; left: -28px; }
-.float-card--sale { right: -18px; bottom: -4px; animation-delay: -3s; }
+.float-card--stock { top: -16px; left: -28px; }
+.float-card--sale { right: -18px; bottom: -16px; animation-delay: -3s; }
 .float-card__icon { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 9px; background: var(--accent-100); color: #b26f00; font-weight: 800; }
 .float-card__icon--ok { background: var(--brand-100); color: var(--brand-700); }
 
@@ -471,5 +473,6 @@ p { margin: 0 0 var(--space-4); }
 @media (max-width: 575.98px) {
   .hero { padding-block: var(--space-7) var(--space-8); }
   .hero__actions .btn { flex: 1 1 100%; }
+  .hero__visual { padding-block: var(--space-2); }
   .float-card { display: none; }
 }
