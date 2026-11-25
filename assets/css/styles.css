@@ -586,7 +586,7 @@ p { margin: 0 0 var(--space-4); }
 .pricing-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  align-items: start;
+  align-items: stretch;
   gap: var(--space-5);
 }
 

@@ -57,7 +57,7 @@ function yearly_monthly_price(int $monthly): int
             </button>
         </div>
 
-        <div class="pricing-grid">
+        <div class="pricing-grid" aria-live="polite">
             <?php foreach ($plans as $plan):
                 $yearly = yearly_monthly_price($plan['monthly']); ?>
                 <article class="plan<?= $plan['featured'] ? ' plan--featured' : '' ?>" aria-labelledby="plan-<?= e($plan['id']) ?>">
