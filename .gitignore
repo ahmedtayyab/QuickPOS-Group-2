@@ -20,3 +20,7 @@ tmp/
 
 # Local automation helpers (Jira scripts)
 tools/local/
+
+# Local evidence captures and editor/tool config
+evidence/
+.claude/
