@@ -7,6 +7,7 @@ $pageTitle = isset($pageTitle) ? $pageTitle . ' | ' . SITE_NAME : SITE_NAME . ' 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>document.documentElement.classList.add('js');</script>
     <title><?= e($pageTitle) ?></title>
     <meta name="description" content="QuickPOS is a fast, simple Point of Sale system with inventory, sales analytics and customer management for retail shops and cafés.">
     <link rel="icon" href="assets/img/logo-mark.svg" type="image/svg+xml">
